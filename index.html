@@ -26,10 +26,10 @@
     <main class="wrap">
       <section class="card">
         <h1>MarkWorks</h1>
-        <p>Ferramentas para estudantes e equipes — em breve.</p>
+        <p>Ferramentas para gestores, empresários, contadores e estudantes — em breve.</p>
         <div class="row" id="form">
           <input id="email" type="email" placeholder="Seu e-mail" aria-label="Seu e-mail" />
-          <button onclick="join()">Avise-me</button>
+          <button onclick="join()">Quero saber mais</button>
         </div>
         <footer>© <span id="y"></span> MarkWorks. Todos os direitos reservados. • <a href="#">Política de Privacidade</a></footer>
       </section>
@@ -40,7 +40,7 @@
         const v = document.getElementById('email').value.trim();
         if(!v){ alert('Informe seu e-mail'); return; }
         // TODO: Troque 'contato@seudominio.com.br' pelo e-mail real do domínio configurado (Titan/HostGator ou outro)
-        window.location.href = 'mailto:contato@seudominio.com.br?subject=Avise-me&body=' + encodeURIComponent('Meu e-mail: '+v);
+        window.location.href = 'mailto:contato@markworks.com.br?subject=Avise-me&body=' + encodeURIComponent('Meu e-mail: '+v);
       }
     </script>
   </body>

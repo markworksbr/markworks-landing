@@ -5,36 +5,40 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>MarkWorks — em breve</title>
     <meta name="description" content="Ferramentas para estudantes e equipes — em breve." />
-    <!-- Fonte Kanit -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Tokens de cor (Paleta Verde) -->
     <link rel="stylesheet" href="./css/tokens.css">
-    <style>
-      /* utilitários mínimos específicos desta página */
-      .wrap{max-width:960px;margin:0 auto;padding:48px 24px;display:flex;min-height:100dvh;align-items:center}
-      .card{width:100%;background:var(--surface);border:1px solid var(--stroke);border-radius:16px;padding:32px}
-      .h1{font-size:clamp(28px,5vw,44px);margin:0 0 12px;font-weight:700;letter-spacing:.01em}
-      .muted{color:var(--text-2)}
-      .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-      .input{flex:1;min-width:220px;padding:12px 14px;border-radius:12px;border:1px solid var(--stroke);background:transparent;color:var(--fg)}
-      footer{margin-top:16px;color:var(--text-2);font-size:14px}
-      a{text-decoration:none}
-    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#20BCFA">
+    <meta property="og:title" content="MarkWorks — Em breve">
+    <meta property="og:description" content="Ferramentas para estudantes e equipes — em breve.">
+    <meta property="og:type" content="website">
   </head>
   <body>
+    <header class="header">
+      <a class="header__brand" href="/">
+        <img src="/assets/icon-markworks.png" alt="MarkWorks ícone">
+        <img src="/assets/logo-markworks-horizontal.png" alt="MarkWorks">
+      </a>
+    </header>
+    <div class="header__spacer"></div>
+
     <main class="wrap">
       <section class="card">
-        <h1 class="h1">MarkWorks</h1>
-        <p class="muted">Ferramentas para estudantes e equipes — em breve.</p>
+        <h1 class="h1">Ferramentas para estudantes e equipes</h1>
+        <p class="muted">Estamos preparando algo especial. Deixe seu e-mail e avisaremos quando for ao ar.</p>
         <div class="row">
           <input class="input" id="email" type="email" placeholder="Seu e-mail" aria-label="Seu e-mail" />
           <a class="btn" href="#" onclick="join()">Quero ser avisado</a>
           <span class="badge">Beta</span>
         </div>
-        <footer>© <span id="y"></span> MarkWorks. Paleta: Background #012E14 · Destaque 1 #369E44 · Destaque 2 #8EA680 · Texto 1 #E7E9EE · Texto 2 #C8D2CD</footer>
+        <footer style="margin-top:16px" class="muted">© <span id="y"></span> MarkWorks.</footer>
       </section>
     </main>
+
     <script>
       document.getElementById('y').textContent = new Date().getFullYear();
       function join(){
